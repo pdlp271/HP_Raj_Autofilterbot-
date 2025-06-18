@@ -57,18 +57,18 @@ UPDATE_CHANNEL_LNK = environ.get('UPDATE_CHANNEL_LNK', 'https://t.me/Filmy_Fusio
 AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-1002282093291')) 
 AUTH_REQ_CHANNEL = int(environ.get('AUTH_REQ_CHANNEL', '-1002282093291'))
 
-IS_VERIFY = is_enabled('IS_VERIFY', "False")
+IS_VERIFY = is_enabled('IS_VERIFY', "True")
 LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-1001965914571')) #Verification Channel Id 
 LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1001965914571')) #If Anyone Set Your Bot In Any Group And Set Shortner In That Group Then In This Channel The All Details Come
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://telegra.ph/file/9ecc5d6e4df5b83424896.jpg")
 
-TUTORIAL = environ.get("TUTORIAL", "https://t.me/")
+TUTORIAL = environ.get("TUTORIAL", "https://t.me/Howtoopenlink271/43")
 TUTORIAL_2 = environ.get("TUTORIAL_2", "https://t.me/")
 TUTORIAL_3 = environ.get("TUTORIAL_3", "https://t.me/")
 
 # Verification (Must Fill All Veriables. Else You Got Error
-SHORTENER_API = environ.get("SHORTENER_API", "")
-SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "")
+SHORTENER_API = environ.get("SHORTENER_API", "linkcents.com")
+SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "b4616e7259b4cdef5784d604b12a53b58a4076bb")
 
 SHORTENER_API2 = environ.get("SHORTENER_API2", "")
 SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "")
