@@ -48,7 +48,7 @@ async def start(client, message):
             key = "second_time_verified" if await db.is_user_verified(user_id) else "last_verified"
         current_time = datetime.now(tz=ist_timezone)
         result = await db.update_notcopy_user(user_id, {key:current_time})
-        await db.update_verify_id_info(user_id, verify_id, {"verified":False})
+        await db.update_verify_id_info(user_id, verify_id, {"verified":True})
         if key == "third_time_verified": 
             num = 3 
         else: 
@@ -63,7 +63,7 @@ async def start(client, message):
             verifiedfiles = f"https://telegram.me/{temp.U_NAME}?start=file_{grp_id}_{file_id}"
         await client.send_message(settings['log'], script.VERIFIED_LOG_TEXT.format(m.from_user.mention, user_id, datetime.now(pytz.timezone('Asia/Kolkata')).strftime('%d %B %Y'), num))
         btn = [[
-            InlineKeyboardButton("✅ ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ɢᴇᴛ ꜰɪʟᴇ ✅", url=IS_VERIFY),
+            InlineKeyboardButton("✅ ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ɢᴇᴛ ꜰɪʟᴇ ✅", url=verifiedfiles),
         ]]
         reply_markup=InlineKeyboardMarkup(btn)
         dlt=await m.reply_photo(
